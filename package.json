@@ -1,0 +1,56 @@
+{
+  "name": "@watchtowerobservability/activity-angular",
+  "version": "0.1.1",
+  "description": "Watchtower hosted activity log: typed standalone Angular component over the <wt-activity> web component",
+  "license": "Apache-2.0",
+  "type": "module",
+  "sideEffects": [
+    "./dist/index.js"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "size": "node scripts/size.mjs",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "test": "vitest run",
+    "prepack": "npm run build && npm run size"
+  },
+  "peerDependencies": {
+    "@angular/core": ">=17",
+    "@watchtowerobservability/activity-web": ">=0.1.0"
+  },
+  "devDependencies": {
+    "@angular/compiler": "22.2.4",
+    "@angular/core": "22.2.4",
+    "happy-dom": "21.0.4",
+    "rxjs": "7.8.2",
+    "typescript": "5.7.2",
+    "vite": "8.3.5",
+    "vitest": "5.0.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/watchtowerobservability/watchtower-activity-angular.git"
+  },
+  "homepage": "https://github.com/watchtowerobservability/watchtower-activity-angular#readme",
+  "peerDependenciesMeta": {
+    "@watchtowerobservability/activity-web": {
+      "optional": true
+    }
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}
