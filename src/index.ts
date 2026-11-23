@@ -6,9 +6,9 @@ import * as i0 from '@angular/core';
 import { ElementRef, EventEmitter, type OnChanges, type OnDestroy } from '@angular/core';
 import {
   applyProps, EVENTS, type ActivityErrorDetail, type ActivityEvent, type ActivityLoadDetail, type ActivityLogProps, type WtActivityElement,
-} from './props';
+} from './props.js';
 
-export * from './props';
+export * from './props.js';
 
 /**
  * `<wt-activity [session]="token" live (activityOpen)="onOpen($event)"></wt-activity>` with `imports: [WtActivityComponent]`.

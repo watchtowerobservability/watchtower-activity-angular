@@ -1,7 +1,7 @@
 import '@angular/compiler'; // JIT: compiles the partial declarations the way an app's linker would
 import { ElementRef } from '@angular/core';
 import { describe, expect, it } from 'vitest';
-import { EVENTS, WtActivityComponent, type ActivityEvent } from './index';
+import { EVENTS, WtActivityComponent, type ActivityEvent } from './index.js';
 
 function make() {
   const el = document.createElement('wt-activity') as HTMLElement & { reloads: number };
